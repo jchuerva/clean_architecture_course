@@ -1,6 +1,6 @@
-require_relative 'name'
-require_relative 'email'
-require_relative 'password'
+require_relative '../value_objects/name'
+require_relative '../value_objects/email'
+require_relative '../value_objects/password'
 require 'securerandom'
 
 class User
