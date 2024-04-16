@@ -1,4 +1,3 @@
-
 class ShowAllUsers
   def initialize(user_repository)
     @user_repository = user_repository
