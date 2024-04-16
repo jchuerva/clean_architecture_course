@@ -1,4 +1,3 @@
-require_relative '../value_objects/name'
 require_relative '../value_objects/email'
 require_relative '../value_objects/password'
 require 'securerandom'
@@ -6,12 +5,12 @@ require 'securerandom'
 class User
   attr_reader :id, :name, :email, :password
 
-  def initialize(name, email, password)
+  def initialize(id: SecureRandom.uuid, name: nil, email: nil, password: nil)
     validate_presence(name, email, password)
-    @id = SecureRandom.uuid 
-    @name = Name.new(name)
-    @email = Email.new(email)
-    @password = Password.new(password)
+    @id = id
+    @name = name
+    @email = Email.new(email).value
+    @password = Password.new(password).value
   end
 
   def ==(other)
