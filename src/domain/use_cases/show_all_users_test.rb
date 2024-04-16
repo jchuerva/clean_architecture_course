@@ -11,8 +11,8 @@ RSpec.describe ShowAllUsers do
   end
 
   it 'show multiple users' do
-    user1 = User.new('John Doe', 'john@example.com', 'password123')
-    user2 = User.new('Juan', 'juan@example.com', 'password123')
+    user1 = User.new(name: 'John Doe', email: 'john@example.com', password: 'password123')
+    user2 = User.new(name: 'Juan', email: 'juan@example.com', password: 'password123')
 
     user_repository_in_memory = UserRepositoryInMemory.new
 

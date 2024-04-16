@@ -4,7 +4,7 @@ class AddNewUser
   end
 
   def execute(user)
-    if @user_repository.show_all.any? { |u| u.email.value == user.email.value }
+    if @user_repository.show_all.any? { |u| u.email == user.email }
       raise ArgumentError, 'Email already exists'
     end
 
