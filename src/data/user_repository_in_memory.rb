@@ -17,5 +17,6 @@ class UserRepositoryInMemory
 
   def add_new_user(user)
     @users << user
+    user.id
   end
 end
