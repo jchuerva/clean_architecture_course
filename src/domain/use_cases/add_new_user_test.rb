@@ -27,14 +27,14 @@ RSpec.describe AddNewUser do
   # end
 
   it 'add user' do
-    user1 = User.new(name: 'John Doe', email: 'john@example.com', password: 'password123')
+    # user1 = User.new(name: 'John Doe', email: 'john@example.com', password: 'password123')
 
     mock_repository_in_memory = double('UserRepositoryInMemory')
     expect(mock_repository_in_memory).to receive(:show_all).and_return([])
-    expect(mock_repository_in_memory).to receive(:add_new_user).and_return(user1.id)
+    expect(mock_repository_in_memory).to receive(:add_new_user).and_return(1)
 
     add_new_user = AddNewUser.new(mock_repository_in_memory)
-    add_new_user.execute(user1)
+    add_new_user.execute(name: 'John Doe', email: 'john@example.com', password: 'password123')
   end
 
   it 'add user with existing email' do
@@ -44,6 +44,8 @@ RSpec.describe AddNewUser do
     expect(mock_repository_in_memory).to receive(:show_all).and_return([user1])
 
     add_new_user = AddNewUser.new(mock_repository_in_memory)
-    expect { add_new_user.execute(user1) }.to raise_error(ArgumentError, 'Email already exists')
+    expect do
+      add_new_user.execute(name: 'John Doe', email: 'john@example.com', password: 'password123')
+    end.to raise_error(ArgumentError, 'Email already exists')
   end
 end
