@@ -1,7 +1,11 @@
+require_relative 'view_interface'
+
 # Used by the Presenter and interprestate the actions of it.
 # It's responsible for implement the logic of the actions.
 # We could have multiple ScreenViews, one for each type of interface (CLI, Web, etc)
 class ScreenView
+  include ViewInterface
+
   def clear_screen
     puts "\e[H\e[2J"
   end
