@@ -1,5 +1,9 @@
 require_relative '../domain/repositories/user_repository_interface'
 
+# data layer implementation
+# In this case we are using an in-memory approach
+# This class is responsible for storing and retrieving data
+# It implements the methods defined in the UserRepositoryInterface
 class UserRepositoryInMemory
   include UserRepositoryInterface
 
