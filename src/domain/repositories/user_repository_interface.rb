@@ -6,7 +6,7 @@ module UserRepositoryInterface
     raise NotImplementedError, 'Implement this method in a subclass'
   end
 
-  def add(_user)
+  def add_new_user(_user)
     raise NotImplementedError, 'Implement this method in a subclass'
   end
 end
