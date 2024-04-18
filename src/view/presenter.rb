@@ -11,6 +11,17 @@ class Presenter
     @dependencies = dependencies
   end
 
+  def run
+    welcome_message
+
+    while true
+      get_all_users
+      create_user
+    end
+  end
+
+  private
+
   def welcome_message
     @view.clear_screen
     @view.welcome
@@ -32,8 +43,6 @@ class Presenter
       @view.show_error(e.message)
     end
   end
-
-  private
 
   def all_users_message(all_users)
     if all_users.empty?
