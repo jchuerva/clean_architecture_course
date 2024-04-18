@@ -23,7 +23,7 @@ class Presenter
   private
 
   def welcome_message
-    @view.clear_screen
+    @view.clean_screen
     @view.welcome
   end
 
