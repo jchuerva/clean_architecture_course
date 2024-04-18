@@ -1,6 +1,6 @@
 # Interface of the view. Where the methods that must be implemented by the presenters are defined.
 module ViewInterface
-  def clear_screen
+  def clean_screen
     raise NotImplementedError, 'Implement this method in a subclass'
   end
 

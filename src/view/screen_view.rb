@@ -6,7 +6,7 @@ require_relative 'view_interface'
 class ScreenView
   include ViewInterface
 
-  def clear_screen
+  def clean_screen
     puts "\e[H\e[2J"
   end
 
