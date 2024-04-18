@@ -20,3 +20,7 @@
 - More about the [flow dependency](https://proandroiddev.com/clean-architecture-data-flow-dependency-rule-615ffdd79e29)
 
 - [How to create an interfaz in ruby](https://otroespacioblog.wordpress.com/2018/06/24/sobre-las-interfaces-en-ruby/)
+- [https://xurxodev.com/blog/](https://xurxodev.com/blog/)
+- [https://blog.karumi.com/](https://blog.karumi.com/)
+- [Cursos Escuela.it](https://escuela.it/cursos)
+- [Youtube DesarrolloWeb.com](https://www.youtube.com/@deswebcom/videos)
